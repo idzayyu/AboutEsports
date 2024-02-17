@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dota2"
+        android:icon="@drawable/dota2"
+        android:orderInCategory="1"
+        android:title="dota2" />
+    <item
+        android:id="@+id/CounterStrike"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="1"
+        android:title="CounterStrike" />
+    <item
+        android:id="@+id/Tekken"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="1"
+        android:title="Tekken" />
+    <item
+        android:id="@+id/Lol"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="1"
+        android:title="Lol" />
+</menu>

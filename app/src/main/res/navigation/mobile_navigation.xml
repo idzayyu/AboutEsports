@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_news">
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.aboutesports.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_navigation_news_to_action_navigation_home_to_news_max_Fragment"
+            app:destination="@id/action_navigation_home_to_news_max_Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_plays"
+        android:name="com.example.aboutesports.ui.playsList.PlaysListFragment"
+        android:label="@string/title_plays"
+        tools:layout="@layout/fragment_plays_list" >
+        <action
+            android:id="@+id/action_navigation_plays_to_matchListFragment"
+            app:destination="@id/matchListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tournaments"
+        android:name="com.example.aboutesports.ui.tournaments.TournamentsFragment"
+        android:label="@string/title_tournaments"
+        tools:layout="@layout/fragment_tournaments" >
+        <action
+            android:id="@+id/action_navigation_tournaments_to_partTourFragment"
+            app:destination="@id/partTourFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_personal_account"
+        android:name="com.example.aboutesports.ui.personalAccount.PersonalAccountFragment"
+        android:label="@string/title_personal_account"
+        tools:layout="@layout/fragment_personal_account" />
+
+    <fragment
+        android:id="@+id/action_navigation_home_to_news_max_Fragment"
+        android:name="com.example.aboutesports.ui.NewsMaxFragment"
+        android:label="@string/title_personal_account"
+        tools:layout="@layout/fragment_news_max" />
+    <fragment
+        android:id="@+id/partTourFragment"
+        android:name="com.example.aboutesports.ui.PartTourFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_partTourFragment_to_infoStageFragment"
+            app:destination="@id/infoStageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoStageFragment"
+        android:name="com.example.aboutesports.ui.InfoStageFragment"
+        android:label="fragment_info_stage"
+        tools:layout="@layout/fragment_info_stage" />
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.example.aboutesports.ui.MatchFragment"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_match" />
+    <fragment
+        android:id="@+id/matchListFragment"
+        android:name="com.example.aboutesports.ui.MatchListFragment"
+        android:label="MatchListFragment" >
+        <action
+            android:id="@+id/action_matchListFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
+    </fragment>
+</navigation>

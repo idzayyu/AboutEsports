@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">About esports</string>
+    <string name="title_news">News</string>
+    <string name="title_plays">Plays</string>
+    <string name="title_tournaments">Tournaments</string>
+    <string name="title_personal_account">Personal account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
