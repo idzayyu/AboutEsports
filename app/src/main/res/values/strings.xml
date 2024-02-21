@@ -30,4 +30,8 @@
     <string name="sign_up_verification_error">Неудалось отправить cообщение с потверждением регистрации на почту</string>
     <string name="sign_up_need">Войдите или зарегестрируйтесь!</string>
     <string name="have_account">Уже есть аккаунт</string>
+    <string name="review">Обзор</string>
+    <string name="Grid">Сетка</string>
+    <string name="Participants">Участники</string>
+    <string name="Rules">Правила</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.aboutesports.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.aboutesports.R
 import com.example.aboutesports.Repo.dataBin.PartTour
 import com.example.aboutesports.Repo.dataTest.TournamentsTest
@@ -42,20 +44,58 @@ class PartTourFragment : Fragment() {
         val tournament = TournamentsTest.lstTest1[(arguments?.getInt("tournamentsId")?.minus(1)) ?: 0]
 
         _binding = FragmentItemListBinding.inflate(inflater, container, false)
+        if (tournament.imageHeadUrl != null ) {
+            Glide.with(binding.artMovie)
+                .load(tournament.imageHeadUrl)
+                .optionalCenterCrop()
+                .into(binding.artMovie)
+        }
+        with(binding){
+            review.setTextColor(Color.RED)
+            review.setBackgroundResource(R.drawable.button_pressed_bg)
+            review.setOnClickListener{
+                review.setTextColor(Color.RED)
+                review.setBackgroundResource(R.drawable.button_pressed_bg)
+                Rules.setTextColor(Color.WHITE)
+                Participants.setTextColor(Color.WHITE)
+                Grid.setTextColor(Color.WHITE)
+                Rules.background = null
+                Participants.background = null
+                Grid.background = null
+            }
+            Rules.setOnClickListener{
+                Rules.setTextColor(Color.RED)
+                Rules.setBackgroundResource(R.drawable.button_pressed_bg)
+                review.setTextColor(Color.WHITE)
+                Participants.setTextColor(Color.WHITE)
+                Grid.setTextColor(Color.WHITE)
+                review.background = null
+                Participants.background = null
+                Grid.background = null
+                myTextView.text = tournament.rules
+            }
+            Participants.setOnClickListener{
+                Participants.setTextColor(Color.RED)
+                Participants.setBackgroundResource(R.drawable.button_pressed_bg)
+                review.setTextColor(Color.WHITE)
+                Rules.setTextColor(Color.WHITE)
+                Grid.setTextColor(Color.WHITE)
+                review.background = null
+                Rules.background = null
+                Grid.background = null
+            }
+            Grid.setOnClickListener{
+                Grid.setTextColor(Color.RED)
+                Grid.setBackgroundResource(R.drawable.button_pressed_bg)
+                review.setTextColor(Color.WHITE)
+                Participants.setTextColor(Color.WHITE)
+                Rules.setTextColor(Color.WHITE)
+                review.background = null
+                Participants.background = null
+                Rules.background = null
+            }
+        }
 
-        // Set the adapter
-
-        val adapter = MyPartTourRecyclerViewAdapter(tournament.partList, object : MyPartTourRecyclerViewAdapter.PartTourClickListener {
-                    override fun onTestClicked(partTour: PartTour) {
-                        binding.root.findNavController().navigate(R.id.action_partTourFragment_to_infoStageFragment, bundleOf("newsId" to  partTour.id))
-                    }
-                })
-
-
-        val layoutManager = LinearLayoutManager(requireActivity())
-
-        binding.rw.layoutManager = layoutManager
-        binding.rw.adapter = adapter
 
         return binding.root
     }
