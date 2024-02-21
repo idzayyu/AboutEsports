@@ -1,6 +1,7 @@
 package com.example.aboutesports.Repo.dataTest
 
 import com.example.aboutesports.Repo.dataBin.News
+import com.google.firebase.auth.FirebaseUser
 
 object NewsTest {
     var lstTest1 = listOf(
@@ -125,5 +126,5 @@ object NewsTest {
     )
 
     )
-
+    var user: FirebaseUser? = null
 }

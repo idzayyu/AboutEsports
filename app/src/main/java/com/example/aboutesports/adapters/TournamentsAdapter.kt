@@ -26,10 +26,11 @@ class TournamentsAdapter(
         ) = with(binding) {
             time.text = tournaments.time.toString()
             name.text = tournaments.head
+            region.text = tournaments.text
             if (tournaments.imageUrl != null ) {
                 Glide.with(imageView)
                     .load(tournaments.imageUrl)
-                    .optionalCenterCrop()
+                    .circleCrop()
                     .into(imageView)
                 imageView.visibility = View.VISIBLE
             }

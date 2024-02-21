@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import com.example.aboutesports.MainActivity
+import com.example.aboutesports.R
+import com.example.aboutesports.Repo.dataTest.NewsTest.user
 import com.example.aboutesports.databinding.FragmentPersonalAccountBinding
 
 class PersonalAccountFragment : Fragment() {
@@ -22,14 +23,38 @@ class PersonalAccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val personalAccountViewModel =
-            ViewModelProvider(this).get(PersonalAccountViewModel::class.java)
 
         _binding = FragmentPersonalAccountBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+
+         if (user != null){
+             binding.name.text = user?.email
+             binding.signIn.text = "Выйти"
+             binding.signIn.setOnClickListener{
+                 binding.name.text = getString(R.string.sign_up_need)
+                 binding.signIn.text = getString(R.string.sign_in_action)
+                 user = null
+                 binding.signIn.setOnClickListener{
+                     (activity as MainActivity).sign_in()
+                     binding.signIn.text = "Выйти"
+                     binding.name.text = user?.email
+                 }
+             }
+        } else {
+             binding.name.text = getString(R.string.sign_up_need)
+             binding.signIn.text = getString(R.string.sign_in_action)
+             binding.signIn.setOnClickListener{
+                 (activity as MainActivity).sign_in()
+                 binding.signIn.text = "Выйти"
+                 binding.name.text = user?.email
+             }
+        }
+
+
+
+        return binding.root
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

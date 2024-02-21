@@ -6,31 +6,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ui.news.NewsFragment">
-
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/homeMaterialToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/prime_black"
-            android:contextClickable="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:logo="@drawable/dota2"
-            app:menu="@menu/main_toolbar"
-            app:navigationIcon="@android:drawable/ic_dialog_dialer"
-            app:title="Dota2"
-            app:titleTextColor="@color/prime_red_black" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rw"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="58dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/homeMaterialToolbar" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".ui.news.NewsFragment"/>

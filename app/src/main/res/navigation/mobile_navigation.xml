@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_navigation_news_to_action_navigation_home_to_news_max_Fragment"
             app:destination="@id/action_navigation_home_to_news_max_Fragment" />
+        <action
+            android:id="@+id/action_navigation_news_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
     <fragment
@@ -72,5 +75,14 @@
         <action
             android:id="@+id/action_matchListFragment_to_matchFragment"
             app:destination="@id/matchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.aboutesports.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_news"
+            app:destination="@id/navigation_news" />
     </fragment>
 </navigation>

@@ -35,8 +35,7 @@ class NewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val newsViewModel =
-            ViewModelProvider(this)[NewsViewModel::class.java]
+
 
         _binding = FragmentNewsBinding.inflate(inflater, container, false)
         drawerLayout = binding.dr
@@ -54,6 +53,7 @@ class NewsFragment : Fragment() {
 
         val adapter = NewsAdapter(NewsTest.lstTest1, object : NewsAdapter.NewsClickListener {
             override fun onTestClicked(news: News) {
+
                 binding.root.findNavController().navigate(R.id.action_navigation_home_to_news_max_Fragment, bundleOf("newsId" to  news.id))
             }
         })

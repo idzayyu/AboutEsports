@@ -6,4 +6,6 @@ class Tournaments(
     ,val text: String
     ,val imageUrl: String? = null
     ,val partList: List<PartTour>
-    ,val time: Int)
+    ,val time: Int
+
+)
