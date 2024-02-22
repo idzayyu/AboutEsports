@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="#9F111C1C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/homeMaterialToolbar"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,13 +27,14 @@
             android:id="@+id/homeMaterialToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/PanelGrey"
             android:contextClickable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:logo="@drawable/dota_2_icons"
             app:menu="@menu/main_toolbar"
-            app:navigationIcon="@android:drawable/ic_dialog_dialer"
+            app:navigationIcon="@drawable/group_1358"
             app:title="Dota2"
             app:titleMarginStart="22dp"
             app:titleTextColor="@color/prime_red_black" />
@@ -41,19 +43,40 @@
             android:id="@+id/rw"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/GreyBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="У вас пока нет матчей"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/homeMaterialToolbar" />
 
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="13 Декабря"
+            app:layout_constraintBottom_toTopOf="@+id/rw"
+            app:layout_constraintEnd_toStartOf="@+id/button5"
+            app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintTop_toBottomOf="@+id/homeMaterialToolbar" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeMaterialToolbar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
