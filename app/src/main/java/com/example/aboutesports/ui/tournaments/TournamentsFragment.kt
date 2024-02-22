@@ -1,5 +1,6 @@
 package com.example.aboutesports.ui.tournaments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -65,7 +66,33 @@ class TournamentsFragment : Fragment() {
 
         binding.rw.layoutManager = layoutManager
         binding.rw.adapter = adapter
+        with(binding){
 
+            current.setOnClickListener{
+                current.setTextColor(Color.RED)
+                current.setBackgroundResource(R.drawable.button_pressed_bg)
+                past.setTextColor(Color.WHITE)
+                future.setTextColor(Color.WHITE)
+                past.background = null
+                future.background = null
+            }
+            past.setOnClickListener{
+                past.setTextColor(Color.RED)
+                past.setBackgroundResource(R.drawable.button_pressed_bg)
+                current.setTextColor(Color.WHITE)
+                future.setTextColor(Color.WHITE)
+                current.background = null
+                future.background = null
+            }
+            future.setOnClickListener{
+                future.setTextColor(Color.RED)
+                future.setBackgroundResource(R.drawable.button_pressed_bg)
+                current.setTextColor(Color.WHITE)
+                past.setTextColor(Color.WHITE)
+                current.background = null
+                past.background = null
+            }
+        }
         return binding.root
     }
 

@@ -4,6 +4,7 @@ import android.widget.Toast
 import com.example.aboutesports.R
 import com.example.aboutesports.Repo.dataTest.NewsTest.user
 import com.example.aboutesports.ui.login.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
 class AccountHelper(private val act:LoginActivity) {
@@ -35,6 +36,7 @@ class AccountHelper(private val act:LoginActivity) {
             }
         }
     }
+
     private fun sendEmailVerification(user:FirebaseUser){
         user.sendEmailVerification().addOnCompleteListener{task ->
             if (task.isSuccessful){

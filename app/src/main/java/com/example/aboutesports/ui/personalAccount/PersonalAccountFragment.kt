@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.aboutesports.MainActivity
 import com.example.aboutesports.R
+import com.example.aboutesports.Repo.dataTest.NewsTest
 import com.example.aboutesports.Repo.dataTest.NewsTest.user
 import com.example.aboutesports.databinding.FragmentPersonalAccountBinding
 
@@ -25,7 +26,6 @@ class PersonalAccountFragment : Fragment() {
     ): View {
 
         _binding = FragmentPersonalAccountBinding.inflate(inflater, container, false)
-
 
          if (user != null){
              binding.name.text = user?.email

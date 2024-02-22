@@ -127,4 +127,5 @@ object NewsTest {
 
     )
     var user: FirebaseUser? = null
+    var userEmail: String? = null
 }

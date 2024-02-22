@@ -1,9 +1,18 @@
 package com.example.aboutesports.Repo.dataTest
 
-import com.example.aboutesports.Repo.dataBin.PartTour
 import com.example.aboutesports.Repo.dataBin.Tournaments
+import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit
 
-object TournamentsTest {const val textRules = "1. Общая информация о проведении Соревнования\n" +
+object TournamentsTest {
+    const val textRules = "Технические правила по виду программы\n" +
+            "\n" +
+            "                   Dota 2 — 1x1\n" +
+            "\n" +
+            "«Турниры на платформе VKPlay»" +
+            "\n" +
+            "\n" +
+            "1. Общая информация о проведении Соревнования\n" +
         "\n" +
         "1.1. Соревнования проходят на турнирной платформе pvp.vkplay.ru/.\n" +
         "\n" +
@@ -114,6 +123,59 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
         "7.7.1. Все исходы/проблемы не предусмотренные Регламентом и Техническими правилами решаются на усмотрение судей.\n" +
         "\n" +
         "7.7.2. Окончательное решение Судейской коллегии обжалованию не подлежит."
+
+    val reviewF_F = "Подробное описание турнира\n" +
+            "\n" +
+            "Призовой фонд:\n" +
+            "\n" +
+            "1 место: 10 000 ₽\n" +
+            "\n" +
+            "2 место: 5 000 ₽\n" +
+            "\n" +
+            "3 место: 2 500 ₽\n" +
+            "\n" +
+            "Внимание! Состав команды может состоять только из представителей одного региона Российской Федерации. Данный турнир проводится между командами из Приволжского Федерального Округа.\n" +
+            "\n" +
+            "Для участия в турнире капитанам команд необходимо зайти в Discord-канал соревнований и выбрать игру. В случае, если судейская бригада не сможет связаться с представителем команды во время турнира, команде может быть присуждено техническое поражение.\n" +
+            "\n" +
+            "Все участники турнира обязаны ознакомиться с регламентом перед стартом турнира. Принимая участие, игроки подтверждают, что ознакомились с регламентом и обязуются выполнять его требования на протяжении всего соревнования.\n" +
+            "\n" +
+            "Минимальное число команд для начала турнира — 8"
+
+
+    val reviewO_O = "Подробное описание турнира\n" +
+            "Для участия в турнире каждый игрок в обязательном порядке должен вступить на сервер в Discord с указанием никнейма, который указан в турнире.\n" +
+            "VK Play Dota 2 — серия киберспортивных турниров по Dota 2.\n" +
+            "\n" +
+            "Все матчи проходят в формате BO1 (до одной победы).\n" +
+            "\n" +
+            "Призы получают участники, занявшие места с 1 по 8.\n" +
+            "\n" +
+            "Расписание\n" +
+            "22 февраля в 17:30 мск — окончание приема заявок;\n" +
+            "22 февраля c 17:30 до 18:00 мск — подтверждение участия в турнире;\n" +
+            "22 февраля в 18:05 мск — публикация турнирной сетки;\n" +
+            "22 февраля в 18:10 мск — начало 1-го тура.\n" +
+            "\n" +
+            "Инструкция для пользователей\n" +
+            "Инструкция по регистрации на платформе и в турнире\n" +
+            "\n" +
+            "Призовой фонд\n" +
+            "Призы получают участники, занявшие места с 1 по 8:*\n" +
+            "\n" +
+            "1 место — 2000 рублей на игрока;\n" +
+            "2 место — 1400 рублей на игрока;\n" +
+            "3-4 место — 1000 рублей на игрока;\n" +
+            "5-8 место — 650 рублей на игрока.\n" +
+            "\n" +
+            "*Передача призов будет осуществлена в течение 30 (тридцати) рабочих дней с момента предоставления необходимых реквизитов.\n" +
+            "*Выплаты происходят на идентифицированный кошелек VK Pay. Просьба ко всем участникам – завести и идентифицировать его на: vk.com/vkpay\n" +
+            "\n" +
+            "Мы в Telegram\n" +
+            "Мы в VK\n" +
+            "\n" +
+            "Турнир проводится при поддержке Федерации компьютерного спорта России."
+
     var lstTest1 = listOf(
         Tournaments(
             1,
@@ -122,8 +184,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/logo-mobile.png?alt=media&token=0f63e21e-888c-4923-bdeb-679b5d85419b",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(3, ChronoUnit.DAYS),
+            textRules,
+            reviewF_F
         ),
         Tournaments(
             2,
@@ -132,8 +195,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/square_83.jpg?alt=media&token=593400b5-71b1-4ea9-8ce6-cf2fd65aa388",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(3, ChronoUnit.DAYS),
+            textRules,
+            reviewF_F
         ),
         Tournaments(
             3,
@@ -142,8 +206,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/logo-mobile.png?alt=media&token=0f63e21e-888c-4923-bdeb-679b5d85419b",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(13, ChronoUnit.DAYS),
+            textRules,
+            reviewF_F
         ),
         Tournaments(
             4,
@@ -152,8 +217,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/logo-mobile.png?alt=media&token=0f63e21e-888c-4923-bdeb-679b5d85419b",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(23, ChronoUnit.DAYS),
+            textRules,
+            reviewF_F
         ),
         Tournaments(
             5,
@@ -162,8 +228,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/logo-mobile.png?alt=media&token=0f63e21e-888c-4923-bdeb-679b5d85419b",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(3, ChronoUnit.DAYS),
+            textRules,
+            reviewO_O
         ),
         Tournaments(
             6,
@@ -172,8 +239,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/square_83.jpg?alt=media&token=593400b5-71b1-4ea9-8ce6-cf2fd65aa388",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(3, ChronoUnit.DAYS),
+            textRules,
+            reviewO_O
         ),
         Tournaments(
             7,
@@ -182,8 +250,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/logo-mobile.png?alt=media&token=0f63e21e-888c-4923-bdeb-679b5d85419b",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(13, ChronoUnit.DAYS),
+            textRules,
+            reviewO_O
         ),
         Tournaments(
             8,
@@ -192,8 +261,9 @@ object TournamentsTest {const val textRules = "1. Общая информаци�
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/logo-mobile.png?alt=media&token=0f63e21e-888c-4923-bdeb-679b5d85419b",
             "https://firebasestorage.googleapis.com/v0/b/about-esports.appspot.com/o/scale_1200.png?alt=media&token=a76691b7-19e5-4119-b007-9b2d9e6af493",
             listOf(),
-            123,
-            textRules
+            LocalDateTime.now().plus(23, ChronoUnit.DAYS),
+            textRules,
+            reviewO_O
         ),
         /*Tournaments(9, "The international 2023", "", null, listOf(PartTour(2,"Плей-офф","нет"),
             PartTour(2,"Групповая стадия","да")),123)*/

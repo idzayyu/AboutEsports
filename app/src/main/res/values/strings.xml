@@ -34,4 +34,7 @@
     <string name="Grid">Сетка</string>
     <string name="Participants">Участники</string>
     <string name="Rules">Правила</string>
+    <string name="future">будущие</string>
+    <string name="current">текущие</string>
+    <string name="past">прошедшее</string>
 </resources>

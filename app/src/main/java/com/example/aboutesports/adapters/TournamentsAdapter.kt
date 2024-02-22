@@ -11,6 +11,10 @@ import com.example.aboutesports.Repo.dataBin.News
 import com.example.aboutesports.Repo.dataBin.Tournaments
 import com.example.aboutesports.databinding.NewsHeadBinding
 import com.example.aboutesports.databinding.TournamentHeadBinding
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
 
 class TournamentsAdapter(
     private val partList: List<Tournaments>, private val listener: TournamentsClickListener
@@ -20,6 +24,8 @@ class TournamentsAdapter(
     inner class TournamentsHolder(item: View) : RecyclerView.ViewHolder(item) {
         private val binding = TournamentHeadBinding.bind(item)
 
+        val formatter = DateTimeFormatter.ofPattern("dd-MM")
+        val today = LocalDateTime.now()
         fun bind(
             tournaments: Tournaments,
             listener: TournamentsClickListener
@@ -27,7 +33,11 @@ class TournamentsAdapter(
             time.text = tournaments.time.toString()
             name.text = tournaments.head
             region.text = tournaments.text
-            if (tournaments.imageUrl != null ) {
+            time.text = tournaments.time.format(formatter)
+            timeForRegistration.text =
+                "До старта: " + ChronoUnit.DAYS.between(today, tournaments.time)
+                    .toString() + " д."
+            if (tournaments.imageUrl != null) {
                 Glide.with(imageView)
                     .load(tournaments.imageUrl)
                     .circleCrop()

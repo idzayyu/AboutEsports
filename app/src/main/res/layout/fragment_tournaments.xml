@@ -40,12 +40,41 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rw"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="58dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current" />
+
+        <Button
+            android:id="@+id/future"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/future"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeMaterialToolbar" />
+
+        <Button
+            android:id="@+id/current"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:text="@string/current"
+            app:layout_constraintEnd_toStartOf="@+id/past"
+            app:layout_constraintStart_toEndOf="@+id/future"
+            app:layout_constraintTop_toBottomOf="@+id/homeMaterialToolbar" />
+
+        <Button
+            android:id="@+id/past"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/past"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/homeMaterialToolbar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

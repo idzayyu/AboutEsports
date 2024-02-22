@@ -53,6 +53,8 @@ class PartTourFragment : Fragment() {
         with(binding){
             review.setTextColor(Color.RED)
             review.setBackgroundResource(R.drawable.button_pressed_bg)
+            myTextView.text = tournament.review
+
             review.setOnClickListener{
                 review.setTextColor(Color.RED)
                 review.setBackgroundResource(R.drawable.button_pressed_bg)
@@ -62,6 +64,7 @@ class PartTourFragment : Fragment() {
                 Rules.background = null
                 Participants.background = null
                 Grid.background = null
+                myTextView.text = tournament.review
             }
             Rules.setOnClickListener{
                 Rules.setTextColor(Color.RED)
@@ -83,6 +86,7 @@ class PartTourFragment : Fragment() {
                 review.background = null
                 Rules.background = null
                 Grid.background = null
+                myTextView.text = tournament.participants + " " + tournament.playerList.size.toString() + " игроков"
             }
             Grid.setOnClickListener{
                 Grid.setTextColor(Color.RED)
@@ -93,6 +97,7 @@ class PartTourFragment : Fragment() {
                 review.background = null
                 Participants.background = null
                 Rules.background = null
+                myTextView.text = tournament.draw
             }
         }
 
