@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "160025352472",
+    "firebase_url": "https://about-esports-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "about-esports",
     "storage_bucket": "about-esports.appspot.com"
   },

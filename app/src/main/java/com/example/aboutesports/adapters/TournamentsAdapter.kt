@@ -17,7 +17,7 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
 class TournamentsAdapter(
-    private val partList: List<Tournaments>, private val listener: TournamentsClickListener
+    private var partList: List<Tournaments>, private val listener: TournamentsClickListener
 ) : RecyclerView.Adapter<TournamentsAdapter.TournamentsHolder>() {
 
 
@@ -50,7 +50,10 @@ class TournamentsAdapter(
         }
 
     }
-
+    fun updateData(newData: List<Tournaments>) {
+        partList = newData
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TournamentsHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.tournament_head, parent, false)

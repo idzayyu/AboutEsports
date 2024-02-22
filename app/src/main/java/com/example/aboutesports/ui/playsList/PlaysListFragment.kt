@@ -35,16 +35,7 @@ class PlaysListFragment : Fragment() {
 
         _binding = FragmentPlaysListBinding.inflate(inflater, container, false)
 
-        val adapter = TournamentsAdapter(TournamentsTest.lstTest1, object : TournamentsAdapter.TournamentsClickListener {
-            override fun onTestClicked(tournaments: Tournaments) {
-                binding.root.findNavController().navigate(R.id.action_navigation_plays_to_matchListFragment, bundleOf("tournamentsId" to  tournaments.id))
-            }
-        })
 
-        val layoutManager = LinearLayoutManager(requireActivity())
-
-        binding.rw.layoutManager = layoutManager
-        binding.rw.adapter = adapter
         return binding.root
     }
 

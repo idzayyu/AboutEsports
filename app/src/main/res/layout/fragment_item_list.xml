@@ -96,6 +96,13 @@
             </LinearLayout>
 
 
+            <Button
+                android:id="@+id/addToTournament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Зарегестрироваться" />
+
             <TextView
                 android:id="@+id/myTextView"
                 android:layout_width="wrap_content"
@@ -105,6 +112,7 @@
                 android:paddingTop="8dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.core.widget.NestedScrollView>
