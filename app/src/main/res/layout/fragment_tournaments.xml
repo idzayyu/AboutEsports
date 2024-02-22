@@ -32,10 +32,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:logo="@drawable/dota2"
+            app:logo="@drawable/dota_2_icons"
             app:menu="@menu/main_toolbar"
             app:navigationIcon="@android:drawable/ic_dialog_dialer"
             app:title="Dota2"
+            app:titleMarginStart="22dp"
             app:titleTextColor="@color/prime_red_black" />
 
         <androidx.recyclerview.widget.RecyclerView

@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.AboutEsports" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/prime_red_black</item>
+        <item name="colorPrimary">@color/Grey</item>
         <item name="colorPrimaryVariant">@color/prime_black</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
