@@ -11,10 +11,10 @@
         android:orderInCategory="1"
         android:title="CounterStrike" />
     <item
-        android:id="@+id/Tekken"
+        android:id="@+id/Hearhstone"
         android:icon="@android:drawable/ic_menu_search"
         android:orderInCategory="1"
-        android:title="Tekken" />
+        android:title="Hearhstone" />
     <item
         android:id="@+id/Lol"
         android:icon="@android:drawable/ic_menu_search"

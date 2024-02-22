@@ -16,4 +16,7 @@
     <color name="prime_red_black">#903749</color>
     <color name="prime_reds">#53354A</color>
     <color name="Grey">#334155</color>
+    <color name="GreyBackground">#1E293B</color>
+    <color name="PanelGrey">#0F172A</color>
+
 </resources>

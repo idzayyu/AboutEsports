@@ -11,7 +11,7 @@
         app:showAsAction="always"/>
     <item
         android:id="@+id/addBut"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/setting"
         android:orderInCategory="1"
         android:title="button_add"
         app:showAsAction="always" />

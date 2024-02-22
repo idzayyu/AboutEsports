@@ -3,7 +3,7 @@
     <style name="Theme.AboutEsports" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/Grey</item>
-        <item name="colorPrimaryVariant">@color/prime_black</item>
+        <item name="colorPrimaryVariant">@color/GreyBackground</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

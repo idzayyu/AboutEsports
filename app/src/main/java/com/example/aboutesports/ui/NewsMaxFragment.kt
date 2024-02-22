@@ -26,6 +26,7 @@ class NewsMaxFragment : Fragment() {
                 .into(_binding.imageView3)
         }
         _binding.name.text = news.text
+        _binding.textView2.text = news.head
         // Inflate the layout for this fragment
         return _binding.root
     }
